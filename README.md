@@ -6,11 +6,26 @@
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### Firebase Setting
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+1. Firebase 프로젝트 생성
+2. Firebase 프로젝트에 Flutter 앱 추가
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Android Setting
+
+1. Firebase 프로젝트에 Android 앱 추가
+2. Firebase SDK 추가
+3. google-services.json 파일 추가
+
+### iOS Setting
+
+1. Firebase 프로젝트에 iOS 앱 추가
+2. Firebase SDK 추가
+3. GoogleService-Info.plist 파일 추가
+
+### Flutter Setting
+
+1. Node.js 설치
+2. Firebase CLI 설치
+3. Flutter 프로젝트에 Firebase 플러그인 추가
+4. FlutterFire 프로젝트 초기화

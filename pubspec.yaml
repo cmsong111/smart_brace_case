@@ -39,12 +39,13 @@ dependencies:
   provider: ^6.0.5
   get_it: ^7.6.4
   loading_animation_widget: ^1.2.0+4
+  logger: ^2.0.2
 
   # Firebase Packages
-  # firebase_auth: ^4.9.0
-  # cloud_firestore: ^4.9.1
-  # firebase_messaging: ^14.6.7
-  # google_sign_in: ^6.1.5
+  firebase_auth: ^4.9.0
+  cloud_firestore: ^4.9.1
+  firebase_messaging: ^14.6.7
+  google_sign_in: ^6.1.5
 
 dev_dependencies:
   flutter_test:

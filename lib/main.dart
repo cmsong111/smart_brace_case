@@ -7,7 +7,16 @@ import 'package:smart_brace_case/src/core/resources/app_constant.dart';
 import 'src/config/route.dart';
 import 'src/presentation/providers/counts.dart';
 
-void main() {
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(
     MultiProvider(
       providers: <SingleChildWidget>[

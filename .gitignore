@@ -343,3 +343,18 @@ fabric.properties
 !/gradle/wrapper/gradle-wrapper.jar
 
 # End of https://www.toptal.com/developers/gitignore/api/android,androidstudio,macos,windows,linux,visualstudiocode,gradle,flutter
+lib/firebase_options.dart
+.dart_tool/
+.flutter-plugins/
+
+# iOS and macOS specific build files
+ios/Flutter/AppFrameworkInfo.plist
+ios/Flutter/Debug.xcconfig
+ios/Flutter/Release.xcconfig
+macos/Flutter/AppFrameworkInfo.plist
+macos/Flutter/Debug.xcconfig
+macos/Flutter/Release.xcconfig
+ios/firebase_app_id_file.json
+ios/Runner/GoogleService-Info.plist
+macos/firebase_app_id_file.json
+macos/Runner/GoogleService-Info.plist
