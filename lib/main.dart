@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
 import 'package:smart_brace_case/src/config/theme.dart';
 import 'package:smart_brace_case/src/core/resources/app_constant.dart';
+import 'package:smart_brace_case/src/presentation/providers/firebase_auth_service.dart';
 
 import 'src/config/route.dart';
 import 'src/presentation/providers/counts.dart';
@@ -22,6 +23,8 @@ void main() async {
       providers: <SingleChildWidget>[
         ChangeNotifierProvider<Counts>(
             create: (BuildContext context) => Counts()),
+        ChangeNotifierProvider<FirebaseAuthService>(
+            create: (BuildContext context) => FirebaseAuthService()),
       ],
       child: const MyApp(),
     ),
@@ -36,8 +39,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: mainTheme,
+      darkTheme: ThemeData.dark(),
       routes: appRoute,
-      initialRoute: AppRoute.home,
+      initialRoute: AppRoute.start,
     );
   }
 }

@@ -1,7 +1,10 @@
 import 'package:smart_brace_case/src/core/resources/app_constant.dart';
-
-import '../presentation/views/main/main_page.dart';
+import 'package:smart_brace_case/src/presentation/views/auth/login_page.dart';
+import 'package:smart_brace_case/src/presentation/views/main/main_page.dart';
+import 'package:smart_brace_case/src/presentation/views/main/start_page.dart';
 
 var appRoute = {
-  AppRoute.home: (context) => const MyHomePage(title: 'Flutter Demo Home Page'),
+  AppRoute.start: (context) => const StartPage(title: 'Flutter Demo Home Page'),
+  AppRoute.login: (context) => LoginPage(),
+  AppRoute.main: (context) => const MainPage(),
 };
