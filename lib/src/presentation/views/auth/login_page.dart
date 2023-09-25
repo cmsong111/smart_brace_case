@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_signin_button/flutter_signin_button.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:logger/logger.dart';
 import 'package:provider/provider.dart';
+import 'package:smart_brace_case/src/core/resources/app_constant.dart';
 import 'package:smart_brace_case/src/presentation/providers/firebase_auth_service.dart';
 
 Logger logger = Logger();
@@ -48,16 +50,22 @@ class LoginPage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 ElevatedButton(
-                  onPressed: () {
-                    _authService.signInWithEmailAndPassword(
+                  onPressed: () async {
+                    await _authService.signInWithEmailAndPassword(
                       email: _idController.text,
                       password: _pwController.text,
                     );
+                    Fluttertoast.showToast(
+                        msg:
+                            "로그인 성공\n로그인된 유저:${_authService.currentUser!.email}");
+                    logger.i(_authService.currentUser!.email);
                   },
                   child: const Text("로그인"),
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, AppRoute.register);
+                  },
                   child: const Text("회원가입"),
                 ),
               ],

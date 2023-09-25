@@ -64,6 +64,7 @@ class FirebaseAuthService with ChangeNotifier {
       idToken: googleAuth.idToken,
     );
     // Once signed in, return the UserCredential
+
     final UserCredential userCredential =
         await _auth.signInWithCredential(credential);
     final User? user = userCredential.user;
