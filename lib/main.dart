@@ -31,8 +31,27 @@ void main() async {
   );
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  String initial = AppRoute.start;
+
+  @override
+  void initState() {
+    super.initState();
+
+    // 로그인 여부에 따라서 초기화면을 결정합니다.
+    FirebaseAuthService auth =
+        Provider.of<FirebaseAuthService>(context, listen: false);
+    auth.currentUser == null
+        ? initial = AppRoute.login
+        : initial = AppRoute.main;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +60,7 @@ class MyApp extends StatelessWidget {
       theme: mainTheme,
       darkTheme: ThemeData.dark(),
       routes: appRoute,
-      initialRoute: AppRoute.start,
+      initialRoute: initial,
     );
   }
 }

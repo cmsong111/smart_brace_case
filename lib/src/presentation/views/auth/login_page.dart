@@ -76,6 +76,10 @@ class LoginPage extends StatelessWidget {
                 logger.d("Google Login button pressed");
                 await _authService.SignInWithGoogle();
                 logger.i(_authService.currentUser!.email);
+
+                if (_authService.currentUser != null) {
+                  Navigator.popAndPushNamed(context, AppRoute.main);
+                }
               },
             ),
             SignInButton(
