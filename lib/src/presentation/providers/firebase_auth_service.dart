@@ -82,6 +82,7 @@ class FirebaseAuthService with ChangeNotifier {
   /// 현재 로그인된 사용자를 로그아웃합니다.
   Future<void> signOut() async {
     await _auth.signOut();
+    await _googleSignIn.signOut();
     notifyListeners();
   }
 }
