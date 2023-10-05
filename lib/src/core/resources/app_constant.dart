@@ -6,4 +6,7 @@ class AppRoute {
   static const String main = '/main';
 
   static const String setting = '/setting';
+
+  static const String settingInfomaion = '/infomation';
+  static const String openSource = '/open-source';
 }
