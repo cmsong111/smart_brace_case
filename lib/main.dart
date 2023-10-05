@@ -6,7 +6,6 @@ import 'package:smart_brace_case/src/core/resources/app_constant.dart';
 import 'package:smart_brace_case/src/presentation/providers/firebase_auth_service.dart';
 
 import 'src/config/route.dart';
-import 'src/presentation/providers/counts.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -21,8 +20,6 @@ void main() async {
   runApp(
     MultiProvider(
       providers: <SingleChildWidget>[
-        ChangeNotifierProvider<Counts>(
-            create: (BuildContext context) => Counts()),
         ChangeNotifierProvider<FirebaseAuthService>(
             create: (BuildContext context) => FirebaseAuthService()),
       ],
@@ -39,7 +36,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  String initial = AppRoute.start;
+  String initial = AppRoute.login;
 
   @override
   void initState() {
