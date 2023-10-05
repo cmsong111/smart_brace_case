@@ -16,8 +16,7 @@ class _DentalPageState extends State<DentalPage> {
         children: [
           Stack(
             children: [
-              Image.network(
-                  "https://www.shhosp.co.kr/common/front/group/images/meidcal/bg_dentistry.jpg"),
+              Image.asset("assets/images/bg_dentistry.jpg"),
               const Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Text("김남주 치과",
