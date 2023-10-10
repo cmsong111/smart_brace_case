@@ -11,4 +11,7 @@ class AppRoute {
 
   static const String settingInfomaion = '/infomation';
   static const String openSource = '/open-source';
+
+  static const String notice = '/notice';
+  static const String article = '/detail';
 }
