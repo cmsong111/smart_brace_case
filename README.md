@@ -2,30 +2,17 @@
 
 스마트 교정기 케이스 앱
 
-## Getting Started
+## 프로젝트
 
-This project is a starting point for a Flutter application.
+동의대학교 동아리캡스톤 디자인 프로젝트
 
-### Firebase Setting
+# Screen shot
 
-1. Firebase 프로젝트 생성
-2. Firebase 프로젝트에 Flutter 앱 추가
+|메인화면|치과 화면|
+|:---:|:---:|
+|![image](./img/Screenshot_1696963125.png)|![image](./img/Screenshot_1696963135.png)|
 
-### Android Setting
+|정보 화면|마이페이지|
+|:---:|:---:|
+|![image](./img/Screenshot_1696963137.png)|![image](./img/Screenshot_1696963140.png)|
 
-1. Firebase 프로젝트에 Android 앱 추가
-2. Firebase SDK 추가
-3. google-services.json 파일 추가
-
-### iOS Setting
-
-1. Firebase 프로젝트에 iOS 앱 추가
-2. Firebase SDK 추가
-3. GoogleService-Info.plist 파일 추가
-
-### Flutter Setting
-
-1. Node.js 설치
-2. Firebase CLI 설치
-3. Flutter 프로젝트에 Firebase 플러그인 추가
-4. FlutterFire 프로젝트 초기화
