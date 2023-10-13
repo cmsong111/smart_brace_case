@@ -4,20 +4,8 @@ import 'package:flutter/material.dart';
 LineChart mainChart({required List<double> timeData}) {
   return LineChart(
     LineChartData(
-      gridData: FlGridData(
+      gridData: const FlGridData(
         drawVerticalLine: true,
-        getDrawingHorizontalLine: (value) {
-          return const FlLine(
-            color: Color.fromARGB(255, 255, 0, 0),
-            strokeWidth: 0.5,
-          );
-        },
-        getDrawingVerticalLine: (value) {
-          return const FlLine(
-            color: Color.fromARGB(255, 0, 140, 255),
-            strokeWidth: 1,
-          );
-        },
       ),
       minX: 0,
       maxX: 6,

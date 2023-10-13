@@ -4,6 +4,7 @@ class AppRoute {
   static const String forgotPassword = '/forgot-password';
 
   static const String main = '/main';
+  static const String map = '/map';
 
   static const String setting = '/setting';
 
