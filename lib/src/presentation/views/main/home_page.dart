@@ -3,10 +3,10 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:provider/provider.dart';
 import 'package:smart_brace_case/src/core/resources/app_constant.dart';
 import 'package:smart_brace_case/src/presentation/providers/firebase_auth_service.dart';
-import 'package:smart_brace_case/src/presentation/views/main/chart_widget.dart';
-import 'package:smart_brace_case/src/presentation/views/main/timer_widget.dart';
-import 'package:smart_brace_case/src/presentation/views/main/todo_widget.dart';
-import 'package:smart_brace_case/src/presentation/views/main/toggle_switch.dart';
+import 'package:smart_brace_case/src/presentation/views/main/widget/chart_widget.dart';
+import 'package:smart_brace_case/src/presentation/views/main/widget/timer_widget.dart';
+import 'package:smart_brace_case/src/presentation/views/main/widget/todo_widget.dart';
+import 'package:smart_brace_case/src/presentation/views/main/widget/toggle_switch.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
