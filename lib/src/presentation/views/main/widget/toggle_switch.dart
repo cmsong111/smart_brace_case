@@ -1,30 +1,33 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:smart_brace_case/src/presentation/providers/timer_provider.dart';
 
-class ToggleSwitch extends StatefulWidget {
+class ToggleSwitch extends StatelessWidget {
   const ToggleSwitch({super.key});
 
   @override
-  State<ToggleSwitch> createState() => _ToggleSwitchState();
-}
-
-class _ToggleSwitchState extends State<ToggleSwitch> {
-  bool value = false;
-
-  @override
   Widget build(BuildContext context) {
+    TimerProvider timerProvider =
+        Provider.of<TimerProvider>(context, listen: true);
     return Card(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           const Text("교정장치 착용 여부"),
-          Switch(
-            value: value,
-            onChanged: (bool value) {
-              setState(() {
-                this.value = value;
-              });
-            },
-          )
+          ChangeNotifierProvider<TimerProvider>(
+            create: (BuildContext context) => TimerProvider(),
+            child: Switch(
+              value: timerProvider.time.isActive,
+              onChanged: (bool value) {
+                print("changed value : {$value}");
+                if (value) {
+                  timerProvider.startTimer();
+                } else {
+                  timerProvider.stopTimer();
+                }
+              },
+            ),
+          ),
         ],
       ),
     );

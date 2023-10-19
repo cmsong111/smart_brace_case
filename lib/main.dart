@@ -4,6 +4,7 @@ import 'package:provider/single_child_widget.dart';
 import 'package:smart_brace_case/src/config/theme.dart';
 import 'package:smart_brace_case/src/core/resources/app_constant.dart';
 import 'package:smart_brace_case/src/presentation/providers/firebase_auth_service.dart';
+import 'package:smart_brace_case/src/presentation/providers/timer_provider.dart';
 
 import 'src/config/route.dart';
 
@@ -22,6 +23,8 @@ void main() async {
       providers: <SingleChildWidget>[
         ChangeNotifierProvider<FirebaseAuthService>(
             create: (BuildContext context) => FirebaseAuthService()),
+        ChangeNotifierProvider<TimerProvider>(
+            create: (BuildContext context) => TimerProvider()),
       ],
       child: const MyApp(),
     ),
