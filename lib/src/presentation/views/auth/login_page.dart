@@ -77,6 +77,9 @@ class LoginPage extends StatelessWidget {
                           msg:
                               "로그인 성공\n로그인된 유저:${_authService.currentUser!.email}");
                       logger.i(_authService.currentUser!.email);
+                      if (_authService.currentUser != null) {
+                        Navigator.popAndPushNamed(context, AppRoute.main);
+                      }
                     }
                   },
                   child: const Text("로그인"),

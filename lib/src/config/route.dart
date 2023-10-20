@@ -1,5 +1,6 @@
 import 'package:smart_brace_case/src/core/resources/app_constant.dart';
 import 'package:smart_brace_case/src/presentation/views/auth/login_page.dart';
+import 'package:smart_brace_case/src/presentation/views/auth/register_input_info.dart';
 import 'package:smart_brace_case/src/presentation/views/auth/register_page.dart';
 import 'package:smart_brace_case/src/presentation/views/detal/notice_detail_page.dart';
 import 'package:smart_brace_case/src/presentation/views/detal/notice_page.dart';
@@ -13,6 +14,7 @@ import 'package:smart_brace_case/src/presentation/views/settings/setting_main.da
 var appRoute = {
   AppRoute.login: (context) => LoginPage(),
   AppRoute.register: (context) => const RegisterPage(),
+  AppRoute.registerInputInfo: (context) => const RegisterUserInputPage(),
   AppRoute.main: (context) => const MainPage(),
   AppRoute.map: (context) => const FindMyIotPage(),
   AppRoute.setting: (context) => const SettingMainPage(),
